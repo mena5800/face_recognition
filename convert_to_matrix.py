@@ -23,6 +23,8 @@ images = [[],[]]
 
 convert_to_mat("mina_george_pre_images",images,0)
 convert_to_mat("mina_prepocessing_images",images,1)
+convert_to_mat("abram_pre",images,2)
+
 
 
 # Save the list to a file using pickle

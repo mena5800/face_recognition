@@ -33,6 +33,7 @@ def preimage(dir_path,dir_path_save):
 
 
 
-preimage("mina_george_images","./mina_george_pre_images")
-preimage("mina_images","./mina_prepocessing_images")
+
+preimage("abram","abram_pre")
+
 
