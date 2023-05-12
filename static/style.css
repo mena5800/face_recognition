@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  h1, h2 {
+    text-align: center;
+  }
+  #image-form {
+    text-align: center;
+    margin: 20px auto;
+  }
+  #output-container {
+    text-align: center;
+    margin: auto;
+    width: 30vw;
+    height: 50vh;
+  }
+  #output-image {
+    max-width: 100%;
+    height: 65vh;
+
+  }
+
+  #input-container{
+    text-align: center;
+    margin: auto;
+    width: 30vw;
+    height: 50vh;
+
+    }
+
+  #input-image{
+    max-width: 100%;
+    height: 65vh;
+    
+  }
+
+  #big-image-container{
+    display: flex;
+    flex-direction: row;
+  }

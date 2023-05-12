@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Transformation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Image Transformation</h1>
+    <form id="image-form">
+        <input type="file" name="image-file" accept="image/*" id="input-image-button">
+    </form>
+    <div id="big-image-container">
+        <div id="input-container">
+            <h2>Input Image</h2>
+            <img id="input-image">
+        </div>
+
+        <div id="output-container">
+            <h2>Output Image</h2>
+            <img id="output-image">
+            <h1 id="prediction"></h1>
+
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
