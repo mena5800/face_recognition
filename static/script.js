@@ -10,7 +10,6 @@ const custom_upload_btn = document.getElementById('custom_btn')
 
 
 inputImageButton.addEventListener('change', async (event) => {
-
   // Create a new FileReader object
   var reader = new FileReader();
 

@@ -6,8 +6,6 @@ def face_detection(img):
     # Load the pre-trained face detection classifier
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-
-
     # Convert the image to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 

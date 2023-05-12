@@ -10,7 +10,7 @@ app = Flask(__name__, static_url_path='/static')
 
 
 # Load the saved model from the file
-with open('D:/git/face_recognition/trained_models.pkl', 'rb') as f:
+with open('./trained_model.pkl', 'rb') as f:
     pca, clf, names = pickle.load(f)
 
 

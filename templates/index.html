@@ -8,23 +8,24 @@
 
 <body>
     <h1>Image Recognition</h1>
+    <div id="img_cont" class="frist_uploader">
+        <button id="custom_btn">CHOOSE FILE</button>
+    </div>
     <form id="image-form">
-        <!-- <input type="file" name="image-file" accept="image/*" id="input-image-button"> -->
-        <div id="img_cont" class="frist_uploader">
-            <input type="file" name="image-file" accept="image/*" id="input-image-button" hidden="hidden" />
-            <button id="custom_btn">CHOOSE FILE</button>
-        </div>
+        
+        <input type="file" name="image-file" accept="image/*" id="input-image-button" hidden="hidden" />
+
     </form>
     <div id="big-image-container">
         <div id="input-container">
             <h2>Input Image</h2>
             <img id="input-image">
         </div>
+        <h1 id="prediction"></h1>
 
         <div id="output-container">
             <h2>Output Image</h2>
             <img id="output-image">
-            <h1 id="prediction"></h1>
 
         </div>
     </div>
