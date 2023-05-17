@@ -5,6 +5,8 @@ from PIL import Image
 from face_detection import face_detection
 import numpy as np
 from face_recognition import predict_image
+from pca import PCA
+
 
 app = Flask(__name__, static_url_path='/static')
 
