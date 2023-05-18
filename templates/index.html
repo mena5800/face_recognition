@@ -10,6 +10,8 @@
     <h1>Image Recognition</h1>
     <div id="img_cont" class="frist_uploader">
         <button id="custom_btn">CHOOSE FILE</button>
+        <button id="camera_btn">open camera</button>
+
     </div>
     <form id="image-form">
         
@@ -28,6 +30,11 @@
             <img id="output-image">
 
         </div>
+    </div>
+    <div id="video_container" >
+        <video id="video" width="640" height="480" autoplay ></video>
+        <button id="capture">Capture</button>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
     </div>
     <script src="../static/script.js"></script>
 </body>

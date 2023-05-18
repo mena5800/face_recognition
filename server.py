@@ -26,8 +26,9 @@ def home():
 @app.route('/transform', methods=['POST'])
 def transform():
     # Get the uploaded image
+    
     image_file = request.files['image-file']
-
+    print(image_file)
     # # Load the image using PIL
     # image = Image.open(image_file)
     # # convert the pil object to numpy array

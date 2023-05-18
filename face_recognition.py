@@ -34,4 +34,5 @@ def predict_image(img, model, pca, names):
     print("probs : ",prob)
     if np.max(prob[0]) < 0.55:
         return "not recognized" 
-    return names[int(result)]
+    max_index = prob[0].argmax()
+    return names[max_index]
