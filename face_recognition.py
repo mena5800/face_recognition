@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 
 def predict_image(img, model, pca, names):
@@ -6,10 +7,8 @@ def predict_image(img, model, pca, names):
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 
-
     # Resize the image
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
     faces = face_cascade.detectMultiScale(
         gray, scaleFactor=1.05, minNeighbors=5)
 
@@ -26,5 +25,13 @@ def predict_image(img, model, pca, names):
     flatten_img = cropped_img.flatten().reshape(1, -1)
     flatten_img = pca.transform(flatten_img)
     result = model.predict(flatten_img)
+    confidence = model.decision_function(flatten_img)
+    prob = model.predict_proba(flatten_img)
 
+    # Print the prediction and confidence
+    print("Prediction:", names[int(result)])
+    print("Confidence:", confidence)
+    print("probs : ",prob)
+    if np.max(prob[0]) < 0.55:
+        return "not recognized" 
     return names[int(result)]
