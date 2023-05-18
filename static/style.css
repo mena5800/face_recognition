@@ -48,6 +48,12 @@ h2 {
 
 }
 
+#ROC_cont {
+  display: flex;
+  flex-direction: row;
+
+}
+
 .frist_uploader {
   text-align: center;
   margin: 20px auto;
@@ -71,8 +77,7 @@ button {
 
 
 
-#prediction{
+#prediction {
   margin-top: 40vh;
   font-family: Arial, Helvetica, sans-serif;
 }
-

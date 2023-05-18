@@ -10,30 +10,41 @@
     <h1>Image Recognition</h1>
     <div id="img_cont" class="frist_uploader">
         <button id="custom_btn">CHOOSE FILE</button>
-        <button id="camera_btn">open camera</button>
+        <button id="ROC">ROC</button>
+        <button id="camera_btn">OPEN CAMERA</button>
+        <button id="capture" style="display: none;">CAPTURE</button>
+
 
     </div>
     <form id="image-form">
-        
+
         <input type="file" name="image-file" accept="image/*" id="input-image-button" hidden="hidden" />
 
     </form>
     <div id="big-image-container">
+        <div id="video_contaner" style="display: none;">
+            <video id="video" width="540" height="380" autoplay
+                style="display: none;margin-left:90px; margin-top: 165px; margin-right: 40px; border: solid #080a49f1 10px;"></video>
+        </div>
+
         <div id="input-container">
             <h2>Input Image</h2>
             <img id="input-image">
         </div>
         <h1 id="prediction"></h1>
 
-        <div id="output-container">
+        <div id="output-container" style="margin-top: 0px;">
             <h2>Output Image</h2>
             <img id="output-image">
 
         </div>
     </div>
-    <div id="video_container" >
-        <video id="video" width="640" height="480" autoplay ></video>
-        <button id="capture">Capture</button>
+    <div id="ROC_cont" style="display: none;">
+
+        <img src="../static/ROC_all.png" style="margin: auto; margin-top: 100px;" width="500px" height="400px">
+
+    </div>
+    <div>
         <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
     </div>
     <script src="../static/script.js"></script>

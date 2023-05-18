@@ -6,13 +6,26 @@ const inputImage = document.getElementById('input-image');
 const prediction = document.getElementById('prediction');
 const custom_upload_btn = document.getElementById('custom_btn');
 const video = document.getElementById('video');
+const video_cont = document.getElementById('video_contaner');
+const roc = document.getElementById('ROC');
+const roc_cont = document.getElementById('ROC_cont');
+const big_cont = document.getElementById('big-image-container');
 
 
 
+roc.addEventListener('click', function () {
+  big_cont.style.display = "none"
+  roc_cont.style.display = "flex"
+});
 
 
 inputImageButton.addEventListener('change', async (event) => {
-  video
+  video_cont.style.display = "none";
+  inputImagecontainer.style.display = "inline"
+  big_cont.style.display = "flex"
+  roc_cont.style.display = "none"
+  capture = document.getElementById('capture');
+  capture.style.display = "none"
   // Create a new FileReader object
   var reader = new FileReader();
 
@@ -63,7 +76,8 @@ document.getElementById('capture').addEventListener('click', function () {
   var canvas = document.getElementById('canvas');
   var context = canvas.getContext('2d');
   var video = document.getElementById('video');
-
+  // video.style.display = "none";
+  // inputImagecontainer.style.display = "inline"
   // Draw the video frame to the canvas
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
@@ -93,4 +107,13 @@ document.getElementById('capture').addEventListener('click', function () {
 
 const camera_btn = document.getElementById("camera_btn");
 
-camera_btn
+camera_btn.addEventListener('click', function () {
+  video_cont.style.display = "inline";
+  video.style.display = "inline";
+  capture = document.getElementById('capture');
+  capture.style.display = "inline"
+  inputImagecontainer.style.display = "none"
+  big_cont.style.display = "flex"
+  roc_cont.style.display = "none"
+});
+
